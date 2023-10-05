@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.ff_anton {
+    font-family: Anton;
+}
+.ff_pacifico {
+    font-family: Pacifico;
+}
+
+.fw_bold {
+    font-weight: bold;
+}
+.white_color {
+    color: white;
+}
+
+.orange_col {
+    color: orange;
+}
+
+.ta_center {
+    text-align: center;
+}
+.displ_inline_block {
+    display: inline-block;
+}
+
+.text_price_shoes {
+    font-size: 40px;
+    line-height: 0.8;
+}
+.img_shoes_size {
+    width: 120px;
+    height: 170px;
+}
+
+.img_socail_logo_size {
+    width: 32px;
+    height: 25px;
+}
+
+.size_and_float_cards {
+    width: 490px;
+    height: 630px;
+    float: left;
+}
+.body_100_size {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.body_card1 {
+    padding: 45px 10px 10px 10px;
+    background-image: url('./img_1card/img_1card/background_card1.png');
+    background-position: -70px -120px;
+}
+
+.logo_card1 {
+    margin: 10px 0 0 10px;
+}
+.logo_img_card1 {
+    float: left;
+}
+
+.logo_heading_card1 {
+    margin-left: 40px;
+}
+
+.logo_text_card1 {
+    line-height: 1.8;
+    margin-left: 40px;
+    font-size: 11px;
+}
+
+.firstline_card1 {
+    font-size: 13px;
+    position: relative;
+    left: 220px;
+    bottom: -5px;
+}
+
+.secondline_card1 {
+    font-size: 40px;
+    line-height: 0.3;
+}
+
+.thirdline_card1 {
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+    left: 19px;
+}
+
+.fourthline_card1 {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.main_card1 {
+    height: 288px;
+}
+
+.firstitem_card1 {
+    padding: 35px 0px 0 45px;
+}
+
+.firstitem_heading_card1 {
+    line-height: 1.2;
+}
+
+.firstitem_img_card1 {
+    width: 46px;
+    height: 55px;
+    padding: 0 15px
+}
+
+.second_item_card1 {
+    padding-top: 170px;
+    padding-right: 50px;
+    float: right;
+}
+
+.percent_second_item_card1 {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.third_part_second_item_card1 {
+    line-height: 0.8;
+}
+
+.footer_card1 {
+    margin-top: 80px;
+
+}
+
+.button_card1 {
+    background: orange;
+    border-radius: 30px;
+}
+
+.button_text_card1 {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.contacts_card1 {
+    text-align: right;
+    margin-left: 160px;
+}
+
+.website_contacts_card1 {
+    font-size: 12px;
+}
+
+
+.body_card2 {
+    background-image: url('./img_2card/img_2card/background2card.png');
+    background-repeat: no-repeat;
+    background-position: -14px -13px;
+}
+
+.logo1_header_card2 {
+    float: left;
+    padding: 30px 0 0 15px;
+}
+
+.logo2_header_card2 {
+    margin-left: 370px;
+    padding: 30px 15px 0 0;
+}
+
+.heading_card2 {
+    padding: 50px 50px 0 50px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.main_card2 {
+    padding: 70px 60px 0 60px;
+}
+
+.discription_belowshoe_card2 {
+    color: #F6F5F2;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.button_card2 {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.button_text_card2 {
+    color: blue;
+}
+
+.contacts_card2 {
+    margin-left: 180px;
+}
+
+
+
+.heading_text_contacts_card2 {
+    font-size: 12px;
+    line-height: 0.4;
+}
+
+.tel_number_card2 {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.first_logo_card3 {
+    padding: 10px 87% 0;
+    width: 40px;
+    height: 40px;
+}
+
+.big_shoe_card3 {
+    padding: 30px 50px 0;
+    width: 350px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.name_brand_card3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.code_number_card3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.main_text_card3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.price_card3 {
+    font-size: 22px;
+}
+
+.choose_color_card3 {
+    margin-bottom: 20px;
+}
+
+.color_orange_card3 {
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.color_orange_card3:hover {
+    background-color: orange;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;  
+}
+
+.color_blue_card3 {
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.color_blue_card3:hover {
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;  
+}
+
+.color_black_card3 {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.color_black_card3:hover {
+    background-color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;  
+}
+
+.color_green_card3 {
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.color_green_card3:hover {
+    background-color: green;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;  
+}
+
+.table_shoe_sizes_card3 {
+    padding: 0 120px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.shoe_sizes_card3 {
+    border: 1px solid black;
+}
+
+.shoe_sizes_card3 td{
+    padding: 0 5px;
+    font-weight: 500;
+}
+
+.shoe_sizes_card3 td:hover {
+    background-color: grey;
+}
+
+.button_addtocart_card3 {
+    padding: 5px 20px;
+    background-color: black;
+    border-radius: 7px;
+    margin-left: 150px;
+
+}
+
+.logo2_card3 {
+    width: 20px;
+    height: 20px;
+}
+
+.footer_text_card3 {
+    font-size: 25px;
+}
+
+
+
+
+.card4 {
+    border: 2px solid black;
+    border-radius: 15px;
+    
+}
+
+.img_logo1_card4 {
+    padding: 40px;
+}
+
+.logo1_card4 {
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+.img_card4 {
+    width: 350px;
+    height: 180px;
+    margin: 25px 0 20px 90px
+}
+
+.slide_cells_card4 {
+    margin-bottom: 20px;
+    margin-left: 220px;
+}
+
+.first_cell_card4 {
+    width: 15px;
+    height: 8px;
+    background-color: grey;
+    border-radius: 8px;
+
+}
+
+.second_cell_card4 {
+    width: 8px;
+    height: 8px;
+    background-color: #E6EBED;
+    border-radius: 100%;
+}
+
+.third_cell_card4 {
+    width: 8px;
+    height: 8px;
+    background-color: #E6EBED;
+    border-radius: 100%;
+}
+
+.model_name_card4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.text_size_card4 {
+    padding-left: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.table_sizes_card4 {
+    margin-left: 155px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.sizes_card4 td {
+    border: 1px solid black;
+    background-color: #E6EBED;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.sizes_card4 td:hover {
+    background-color: grey;
+}
+
+.footer_card4 {
+    padding: 0 25px;
+}
+
+.price_text_card4 {
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+.button_card4 {
+    margin-left: 250px;
+    padding: 5px 20px;
+    background-color: orange;
+    border-radius: 7px;
+    box-shadow: 0 5px 5px black;
+}
+
+.buton_text_card4 {
+    font-size: 18px;
+}
+
+.header_card5 {
+    margin-bottom: 25px;
+    padding: 15px;
+    
+}
+
+.logo1_left_card5 {
+    float: left;
+    padding: 5px 0 0 10px;
+}
+
+.logo_left_card5 {
+    width: 50px;
+    height: 50px;
+}
+
+.heading_card5 {
+    float: left;
+    padding: 20px 100px 0;
+}
+
+.logo2_right_card5 {
+    padding: 5px 10px 0 0;
+}
+
+.logo_right_card5 {
+    width: 50px;
+    height: 50px;
+}
+
+.main_card5 {
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+
+.label_sale_card5 {
+    margin-bottom: 15px;
+}
+
+.text_lable_card5 {
+    background-color: #F56672;
+    padding: 5px 10px;
+    border-radius: 15px 0;
+    color: #F6F5F2;
+}
+
+.leftpart_main_card5 {
+    width: 140px;
+    height: 150px;
+}
+
+.big_img_bottle {
+    width: 140px;
+    height: 150px;
+}
+
+.rightpart_main_card5 {
+    width: 335px;
+}
+
+.price_card5 {
+    font-size: 25px;
+}
+
+.old_price_card5 {
+    padding-left: 5px;
+    text-decoration-line: line-through; 
+    text-decoration-style: double;
+    color: grey;
+}
+
+.review_text_card5 {
+    margin-left: 70px;
+    color: grey;
+}
+
+.img_stars_card5 {
+    width: 50px;
+    height: 10px;
+}
+
+.stars_logo3_card5 {
+    width: 48px;
+    height: 10px;
+}
+
+.description_text_card5 {
+    padding: 10px 5px;
+}
+
+.button_card5 {
+    padding: 0 5px;
+    margin-left: 145px;
+    background-color: #B477F5;
+    border-radius: 20px;
+
+}
+
+.button_text_card5 {
+    padding: 5px 10px;
+    color: #F6F5F2;
+    font-size: 18px;
+}
+
+.button_etc_card5 {
+    padding: 0 5px;
+}
+
+.etc_text_card5 {
+    color: gray;
+    font-size: 14px;
+}
+
+
+.body_card6 {
+    background-image: url('./img_6card/img_6card/background6card.png');
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+}
+
+.header_card6 {
+    margin: 10px 10px 25px 10px;
+    padding: 15px;
+}
+
+.heading_card6 {
+    font-size: 24px;
+}
+
+.choose_glass_color_card6 {
+    margin-left: 150px;
+}
+
+.color_blue_card6 {
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.color_blue_card6:hover {
+    border: 2px solid black;
+}
+  
+.color_aqua_card6 {
+    background-color: aqua;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.color_aqua_card6:hover {
+    border: 2px solid black;
+}
+
+.color_violet_card6 {
+    background-color: violet;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.color_violet_card6:hover {
+    border: 2px solid black;
+}
+
+.dicription_glass_card6 {
+    font-size: 20px;
+    color: grey;
+}
+
+.big_img_card6 {
+    margin: 0 15px 25px 15px;
+    padding: 10px;
+}
+
+.big_glass_card6 {
+    width: 300px;
+    height: 150px;
+}
+
+.price_card6 {
+    text-align: right;
+    font-size: 30px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+}
+
+.button_card6 {
+    margin-left: 320px;
+    padding: 5px 35px 5px 10px;
+    background: rgba(94, 250, 246, 0.7);
+    background-image: url('./img_6card/logo_6card/logo2.png');
+    background-repeat: no-repeat;
+    border-radius: 20px; 
+    background-position: 123px 4px;
+}
