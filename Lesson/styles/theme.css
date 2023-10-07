@@ -1,0 +1,17 @@
+:root {
+  --theme: light;
+}
+
+@container style(--theme: light) {
+  * {
+    --color-primery: black;
+    --color-bg: #FFF
+  }
+}
+
+@container style(--theme: dark) {
+  * {
+    --color-primery: white;
+    --color-bg: #242625;
+  }
+}
