@@ -1,0 +1,25 @@
+.gap_8 {
+  gap: 8px;
+}
+
+.gap_10 {
+  gap: 10px;
+}
+
+.gap_16 {
+  gap: 16px;
+  overflow: var(--overflow);
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.border-radius-sm {
+  border-radius: 100px;
+}
+
+.avatar_text-size {
+  margin: 0;
+  width: 150px;
+}

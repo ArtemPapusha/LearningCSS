@@ -1,0 +1,45 @@
+.typography_sm {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-primery);
+}
+
+.typography_md {
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: var(--color-secondary);
+}
+
+.typography_bold {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-primery);
+}
+
+.typography_avatar {
+  color: var(--neutral-white);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.typography_icon {
+  font-size: 24px;
+}
+
+.typography_icon-sun-moon {
+  font-size: 12px;
+}
