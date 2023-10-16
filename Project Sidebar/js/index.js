@@ -8,100 +8,122 @@ const LOCAL_STORAGE_THEME_KEY = 'theme';
 const LOCAL_STORAGE_SIZE_KEY = 'size';
 const THEME_DARK_CLASS_VALUE = 'theme-dark';
 const SIZE_SHORT_CLASS_VALUE = 'size-short';
+const THEME_SELECTOR = '.theme';
+const ASIDE_SIZE_SELECTOR = '#sidebar_size';
 
+const $btnExpandSidebar = document.querySelector('#OnlyOpenSidebar');
+const $searchInput = document.querySelector('#searchInput');
 const $btnClickMe = document.querySelector('#switch__slider');
 const $switchInput = document.querySelector('.switch__input');
 const $theme = document.querySelector('.theme');
 const $btnCollapse = document.querySelector('#btn_sidebar_size');
 const $aside_size = document.querySelector('#sidebar_size');
 
+(function() {
+  const theme = getLocalStorageItem(LOCAL_STORAGE_THEME_KEY);
+  const size = getLocalStorageItem(LOCAL_STORAGE_SIZE_KEY);
 
-  const savedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
-  const savedSize = localStorage.getItem(LOCAL_STORAGE_SIZE_KEY);
+  const themeStyleVar = getThemeStyleVar(theme === THEME_DARK_VALUE);
+  const sizeStyleVar = getSidebarStyleVar(size === SIDEBAR_SHORT_VALUE);
 
-  const currentTheme = savedTheme === THEME_DARK_VALUE 
-    ? `${THEME}: ${THEME_DARK_VALUE};` 
-    : `${THEME}: ${THEME_LIGHT_VALUE};`;
- 
-  
-  const currentSize = savedSize === SIDEBAR_SHORT_VALUE 
-    ? `${SIDEBAR_SIZE}: ${SIDEBAR_SHORT_VALUE};` 
-    : `${SIDEBAR_SIZE}: ${SIDEBAR_LARGE_VALUE};`;
+  setRootStyle(themeStyleVar + sizeStyleVar);
 
-  
-  document.querySelector(':root').style.cssText = currentTheme + currentSize;
-  
-  if(savedTheme === THEME_DARK_VALUE) {
-    $theme.classList.add(THEME_DARK_CLASS_VALUE);
+
+  if(theme === THEME_DARK_VALUE) {
+    handleNodeClass(THEME_SELECTOR, THEME_DARK_CLASS_VALUE);
     $switchInput.setAttribute('checked', true);
   }
-  
-  if(savedSize === SIDEBAR_SHORT_VALUE) {
-    $aside_size.classList.add(SIZE_SHORT_CLASS_VALUE);
+  if(size === SIDEBAR_SHORT_VALUE) {
+    handleNodeClass(ASIDE_SIZE_SELECTOR, SIZE_SHORT_CLASS_VALUE);
   }
+}());
 
-  let sizeSidebar;
-  function getLocalStorageTheme (themeValue) {
-    document.querySelector(':root').style.cssText = `${THEME}: ${themeValue}; ${sizeSidebar}`;
-    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, themeValue);
+function getLocalStorageItem(key) {
+  return localStorage.getItem(key);
+}
+
+function setLocalStorageItem(key, value) {
+  return localStorage.setItem(key, value);
+}
+
+function setRootStyle(value) {
+  document.querySelector(':root').style.cssText = value;
+}
+
+function getThemeStyleVar(cond) {
+  return cond ? `${THEME}: ${THEME_DARK_VALUE};` : `${THEME}: ${THEME_LIGHT_VALUE};`;
+}
+
+function getSidebarStyleVar(cond) {
+  return cond ? `${SIDEBAR_SIZE}: ${SIDEBAR_SHORT_VALUE};` : `${SIDEBAR_SIZE}: ${SIDEBAR_LARGE_VALUE};`;
+}
+
+function handleNodeClass(selector, className, isRemove = false) {
+  const $node = document.querySelector(selector);
+
+  if(isRemove) {
+    $node.classList.remove(className);
+  } else {
+    $node.classList.add(className);
   }
+}
 
-  // function getLocalStorage (property, value, sidebarProperty, storageKey) {
-  //   document.querySelector(':root').style.cssText = `${property}: ${value}; ${sidebarProperty}`;
-  //   localStorage.setItem(storageKey, value);
-  // }
-
-$btnClickMe.addEventListener('click', () => {
+const handleClickBtnClickMe = () => {
   const $aside_size = document.querySelector('#sidebar_size');
-  sizeSidebar = $aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE) 
-    ? `${SIDEBAR_SIZE}: ${SIDEBAR_SHORT_VALUE};` 
-    : `${SIDEBAR_SIZE}: ${SIDEBAR_LARGE_VALUE};`;
+  const isThemeValueDark = !$theme.classList.contains(THEME_DARK_CLASS_VALUE);
+  const theme = getThemeStyleVar(isThemeValueDark);
+  const size = getSidebarStyleVar($aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE));
 
-  if(!$theme.classList.contains(THEME_DARK_CLASS_VALUE)) {
-    $theme.classList.add(THEME_DARK_CLASS_VALUE);
-    getLocalStorageTheme (THEME_DARK_VALUE);
+  setLocalStorageItem(LOCAL_STORAGE_THEME_KEY, isThemeValueDark ? THEME_DARK_VALUE : THEME_LIGHT_VALUE);
+  setRootStyle(theme + size);
+
+  if(isThemeValueDark) {
+    handleNodeClass(THEME_SELECTOR, THEME_DARK_CLASS_VALUE);
   } else {
-    $theme.classList.remove(THEME_DARK_CLASS_VALUE);
-    getLocalStorageTheme (THEME_LIGHT_VALUE);
+    handleNodeClass(THEME_SELECTOR, THEME_DARK_CLASS_VALUE, true);
   }
-});
-
-let themeSidebar;
-
-function checkTheme () {
-  const $theme = document.querySelector('.theme');
-  themeSidebar = $theme.classList.contains(THEME_DARK_CLASS_VALUE) 
-    ? `${THEME}: ${THEME_DARK_VALUE};` 
-    : `${THEME}: ${THEME_LIGHT_VALUE};`;
 }
 
-function getLocalStorageSize (sizeValue) {
-  document.querySelector(':root').style.cssText = `${SIDEBAR_SIZE}: ${sizeValue}; ${themeSidebar}`;
-  localStorage.setItem(LOCAL_STORAGE_SIZE_KEY, sizeValue);
+const handleClickBtnCollapse = () => {
+  const isSizeValueShort = !$aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE);
+  const size = getSidebarStyleVar(isSizeValueShort);
+  const theme = getThemeStyleVar($theme.classList.contains(THEME_DARK_CLASS_VALUE));
+
+  setLocalStorageItem(LOCAL_STORAGE_SIZE_KEY, isSizeValueShort ? SIDEBAR_SHORT_VALUE : SIDEBAR_LARGE_VALUE);
+  setRootStyle(size + theme);
+
+  if(isSizeValueShort) {
+    handleNodeClass(ASIDE_SIZE_SELECTOR, SIZE_SHORT_CLASS_VALUE);
+  } else {
+    handleNodeClass(ASIDE_SIZE_SELECTOR, SIZE_SHORT_CLASS_VALUE, true);
+  }
 }
 
-$btnCollapse.addEventListener('click', () => {
-  checkTheme ();
+const handleClickBtnExpandSidebar = () => {
+  const isSizeValueShort = $aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE);
 
-  if(!$aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE)) {
-    $aside_size.classList.add(SIZE_SHORT_CLASS_VALUE);
-     getLocalStorageSize (SIDEBAR_SHORT_VALUE);
-  } else {
-    $aside_size.classList.remove(SIZE_SHORT_CLASS_VALUE);
-    getLocalStorageSize (SIDEBAR_LARGE_VALUE);
+  if(!isSizeValueShort) {
+    return false;
   }
-});
 
-const $btnExpandSidebar = document.querySelector('#OnlyOpenSidebar');
-const $searchInput = document.querySelector('#searchInput')
+  const size = getSidebarStyleVar(!isSizeValueShort);
+  const theme = getThemeStyleVar($theme.classList.contains(THEME_DARK_CLASS_VALUE));
 
-$btnExpandSidebar.addEventListener('click', () => {
-  checkTheme ();
+  setLocalStorageItem(LOCAL_STORAGE_SIZE_KEY, SIDEBAR_LARGE_VALUE);
+  setRootStyle(size + theme);
 
-  if ($aside_size.classList.contains(SIZE_SHORT_CLASS_VALUE)) {
-    $aside_size.classList.remove(SIZE_SHORT_CLASS_VALUE);
-    getLocalStorageSize (SIDEBAR_LARGE_VALUE);
+  if (isSizeValueShort) {
+    handleNodeClass(ASIDE_SIZE_SELECTOR, SIZE_SHORT_CLASS_VALUE, true);
     $searchInput.focus()
-  }
+  } 
+}
 
-});
+$openButton.addEventListener('click', handleClickOpenButton);
+
+$closeButton.addEventListener('click', handleClickCloseButton);
+
+$btnExpandSidebar.addEventListener('click', handleClickBtnExpandSidebar);
+
+$btnClickMe.addEventListener('click', handleClickBtnClickMe);
+
+$btnCollapse.addEventListener('click', handleClickBtnCollapse);

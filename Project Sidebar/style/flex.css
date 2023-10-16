@@ -30,12 +30,20 @@
   justify-content: center;
 }
 
+.justify-content-end {
+  justify-content: end;
+}
+
 .justify-content-start {
   justify-content: flex-start;
 }
 
 .align-self-center {
   align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
 }
 
 .flex-shrink-0 {
