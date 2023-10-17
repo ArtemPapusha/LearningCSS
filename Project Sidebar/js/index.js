@@ -127,3 +127,5 @@ $btnExpandSidebar.addEventListener('click', handleClickBtnExpandSidebar);
 $btnClickMe.addEventListener('click', handleClickBtnClickMe);
 
 $btnCollapse.addEventListener('click', handleClickBtnCollapse);
+
+overlay.addEventListener('click', handleClickCloseButton);

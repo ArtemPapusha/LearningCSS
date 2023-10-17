@@ -12,3 +12,4 @@ const handleClickCloseButton = () => {
   modal.classList.remove("open");
   overlay.classList.remove("open");
 }
+
