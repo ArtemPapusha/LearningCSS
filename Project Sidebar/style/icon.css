@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../Font/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon_moon_custom {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bigmoon:before {
+  content: "\e900";
+  color: #7c7c7a;
+}
+.icon-Bigsundark:before {
+  content: "\e901";
+  color: #c0bfbd;
+}
+.icon-clock:before {
+  content: "\e902";
+  color: #7c7c7a;
+}
+.icon-clockdark:before {
+  content: "\e903";
+  color: #c0bfbd;
+}
+.icon-cube:before {
+  content: "\e904";
+  color: #7c7c7a;
+}
+.icon-cubedark:before {
+  content: "\e905";
+  color: #c0bfbd;
+}
+.icon-exit:before {
+  content: "\e906";
+  color: #7c7c7a;
+}
+.icon-exitdark:before {
+  content: "\e907";
+  color: #c0bfbd;
+}
+.icon-house:before {
+  content: "\e908";
+  color: #7c7c7a;
+}
+.icon-housedark:before {
+  content: "\e909";
+  color: #c0bfbd;
+}
+.icon-loop:before {
+  content: "\e90a";
+  color: #7c7c7a;
+}
+.icon-loopdark:before {
+  content: "\e90b";
+  color: #c0bfbd;
+}
+.icon-moondark:before {
+  content: "\e90c";
+  color: #a8e0ff;
+}
+.icon-rate:before {
+  content: "\e90d";
+  color: #7c7c7a;
+}
+.icon-ratedark:before {
+  content: "\e90e";
+  color: #c0bfbd;
+}
+.icon-ring:before {
+  content: "\e90f";
+  color: #7c7c7a;
+}
+.icon-ringdark:before {
+  content: "\e910";
+  color: #c0bfbd;
+}
+.icon-sun:before {
+  content: "\e911";
+  color: #ffb04b;
+}

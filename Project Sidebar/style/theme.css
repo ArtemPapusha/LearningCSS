@@ -1,0 +1,96 @@
+:root {
+  --theme: light;
+  --sidebar-size: large;
+}
+
+@container style(--sidebar-size: large) {
+  * {
+    --width-aside: 250px;
+    --width-aside-header: 202px;
+    --width-body-wrapper: 218px;
+    --width-search: 186px;
+    --width-menu: 186px;
+    --width-aside-footer: 218px;
+    --width-logout: 186px;
+    --width-darmode: 121px;
+    --width-darmode-padding: 14px 16px;
+    --width-whole-darmode-margin: 0;
+    --flex-position-justify: space-between;
+    --btn-position-left: 239px;
+    --btn-bi: url('../img/left_direction.png');
+    --overflow: none;
+  }
+}
+
+@container style(--sidebar-size: short) {
+  * {
+    --width-aside: 90px;
+    --width-aside-header: 44px;
+    --width-body-wrapper: 54px;
+    --width-search: 24px;
+    --width-menu: 54px;
+    --width-aside-footer: 54px;
+    --width-logout: 54px;
+    --width-darmode: 0px;
+    --width-darmode-padding: 0px 0px;
+    --width-whole-darmode-margin: 14px 0 0 8px;
+    --flex-position-justify: flex-start;
+    --btn-position-left: 78px;
+    --btn-bi: url('../img/right_direction.png');
+    --overflow: hidden;
+  }
+}
+
+@container style(--theme: light) {
+  * {
+    --neutral-white: #FFF;
+    --color-primery: #222133;
+    --color-secondary: #7C7C7A;
+    --color-bg: #FFF;
+    --color-bg-avatar: #4A49CB;
+    --color-input-bg: #F5F5F5;
+    --color-input-bg-sm: #F5F5F5;
+    --color-input-bg-sm-swtch: #FFF;
+
+  }
+}
+
+@container style(--theme: short-light) {
+  * {
+    --neutral-white: #FFF;
+    --color-primery: #222133;
+    --color-secondary: #7C7C7A;
+    --color-bg: #FFF;
+    --color-bg-avatar: #4A49CB;
+    --color-input-bg: #F5F5F5;
+    --color-input-bg-sm: #F5F5F5;
+    --color-input-bg-sm-swtch: #FFF;
+    
+  }
+}
+
+@container style(--theme: dark) {
+  * {
+    --neutral-white: #FFF;
+    --color-primery: #EFEFEF;
+    --color-secondary: #C0BFBD;
+    --color-bg: #242625;
+    --color-bg-avatar: #A492FF;
+    --color-input-bg: #424444;
+    --color-input-bg-sm: #424444;
+    --color-input-bg-sm-swtch: #1E2020;
+  }
+}
+
+@container style(--theme: short-dark) {
+  * {
+    --neutral-white: #FFF;
+    --color-primery: #EFEFEF;
+    --color-secondary: #C0BFBD;
+    --color-bg: #242625;
+    --color-bg-avatar: #A492FF;
+    --color-input-bg: #424444;
+    --color-input-bg-sm: #A1A1A1;
+    --color-input-bg-sm-swtch: #1E2020;
+  }
+}

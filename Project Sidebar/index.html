@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/iconmoon.css"> 
+  <link rel="stylesheet" href="./style/icon.css">
+  <title>Sidebar</title>
+</head>
+<body>
+  <header></header>
+  <div class="theme"></div>
+  <div class="container d-flex">
+    <button id="btn_sidebar_size"></button>
+    <aside id="sidebar_size">
+      <div class="aside_header d-flex align-items-center gap_8">
+        <div class="avatar d-flex justify-content-center align-items-center flex-shrink-0 border-radius">
+          <p class="avatar_text typography_avatar">AF</p>
+        </div>
+        <div class="login_info">
+          <p class="name typography_bold avatar_text-size">
+            AnimatedFred
+          </p>
+          <p class="e-mail typography_sm avatar_text-size">
+            animated@demo.com
+          </p>
+        </div>
+      </div>
+      <div class="aside_body">
+        <div class="body_wrapper d-flex flex-column justify-content-center gap_16">
+          <div class="search d-flex align-items-center gap_16 border-radius">
+              <button id="OnlyOpenSidebar">
+                <span class="icon_moon_custom icon-loop flex-shrink-0 typography_icon"></span>
+              </button>
+            <input id="searchInput" class="typography_md" type="search" placeholder="Search...">
+          </div>
+          <div class="menu d-inline-flex flex-column align-items-start gap_16">
+            <button class="buttons d-flex align-items-center gap_16 border-radius">
+              <span class="icon_moon_custom icon-house flex-shrink-0 typography_icon"></span>
+              <p class="menu_text typography_md text_left">
+                Dashbroad
+              </p>
+            </button>
+            <button class="buttons d-flex align-items-center gap_16 border-radius">
+              <span class="icon_moon_custom icon-rate flex-shrink-0 typography_icon"></span>
+              <p class="menu_text typography_md text_left">
+                Revenue
+              </p>
+            </button>
+            <button id="btnOpenModalNotifications" class="buttons d-flex align-items-center gap_16 border-radius">
+              <span class="icon_moon_custom icon-ring flex-shrink-0 typography_icon"></span>
+              <p class="menu_text typography_md text_left">
+                Notifications
+              </p>
+            </button>
+            <div class="modal_notifications">
+              <button id="btnCloseModalNotifications" class="align-self-end">
+                <span class="icon icon-cross"></span>
+              </button>
+              <span class="typography_md menu_text">
+                <h2>Notification</h2>
+              </span>
+            </div>
+            <div class="overlay"></div>
+            <button class="buttons d-flex align-items-center gap_16 border-radius">
+              <span class="icon_moon_custom icon-clock flex-shrink-0 typography_icon"></span>
+              <p class="menu_text typography_md text_left">
+                Analytics
+              </p>
+            </button>
+            <button class="buttons d-flex align-items-center gap_16 border-radius">
+              <span class="icon_moon_custom icon-cube flex-shrink-0 typography_icon"></span>
+              <p class="menu_text typography_md text_left">
+                Inventory
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="aside_footer">
+        <button class="logout buttons d-flex align-items-center gap_16 border-radius">
+          <span class="icon_moon_custom icon-exit flex-shrink-0 typography_icon"></span>
+          <p class="typography_md menu_text text_left">
+            Logout
+          </p>
+        </button>
+        <div class="dark_wholemode d-flex flex-row align-items-center">
+          <div class="darkmode d-flex align-items-center gap_16 border-radius">
+            <span class="icon_moon_custom icon-bigmoon flex-shrink-0 typography_icon"></span>
+            <p class="menu_text typography_md flex-shrink-0 text_left">
+              Darkmode
+            </p>
+          </div>
+          <label class="switch d-flex justify-content-center">
+            <input type="checkbox" class="switch__input d-flex">
+            <span id="switch__slider" class="icon_moon_custom border-radius-sm icon-sun"></span>
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <main></main>
+  </div>
+  <footer></footer>
+  <script src="./js/modal.js"></script>
+  <script src="./js/index.js" ></script>
+</body>
+</html>
